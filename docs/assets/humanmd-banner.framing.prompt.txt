@@ -1,0 +1,3 @@
+Built-in image_gen edit of the existing project artwork.
+
+Tighten the framing of this existing README banner so the existing title, subtitle and three characters fill more of its width. Trim the large blank left and right margins; preserve a small clean safety margin. Keep every word exactly unchanged, preserve all characters, their proportions, pixel art, white background and colors. No new design, text or decoration. Keep all existing content intact and readable. Landscape canvas about 2:1 instead of 3:1.

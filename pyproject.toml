@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "humanmd"
+version = "0.1.0"
+description = "Initialize human-owned research and software project intent documents from Markdown templates."
+dynamic = ["readme"]
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["human-intent", "markdown", "ai", "templates"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=7", "build>=1", "hatchling>=1.27", "twine>=6", "readme-renderer[md]>=44"]
+
+[project.scripts]
+humanmd = "humanmd.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Kylo1110/HUMANmd"
+Issues = "https://github.com/Kylo1110/HUMANmd/issues"
+
+[tool.hatch.metadata.hooks.custom]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/humanmd"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/docs", "/examples", "/.github", "/README.md", "/HUMAN.md", "/AGENTS.md", "/CONTRIBUTING.md", "/LICENSE", "/pyproject.toml", "/hatch_build.py", "/uv.lock"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

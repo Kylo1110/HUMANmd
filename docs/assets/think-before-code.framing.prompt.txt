@@ -1,0 +1,3 @@
+Built-in image_gen edit of the existing project artwork.
+
+Tighten the framing of this existing README diagram by removing the large empty white area above the six headings. All six steps must remain one complete horizontal row, all words and numbers exactly unchanged. Preserve woman robot man trio below, icons, arrows, colors, crisp pixel art and relative sizes. Trim outer blank canvas, leaving a small even white safety margin. No new design, content or headline. Wide landscape compact image.
