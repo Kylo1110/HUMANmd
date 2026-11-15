@@ -63,6 +63,12 @@ Your README may already explain why the project exists. HUMAN.md gives that reas
 | `CHANGELOG.md` | What changed in the software. |
 | `HUMAN.md` | Why the project exists, what it aims to achieve, and how its reasoning evolves. |
 
+## Keep it simple
+
+A few honest sentences can be enough. Templates, headings, and Decision Logs are optional tools. Adapt the structure as your project develops, leave questions open, and add detail when it helps. HUMAN.md complements Git history and your existing documentation; it provides context rather than enforcing a workflow or guaranteeing agent behavior. The CLI only copies templates and does not generate project intent.
+
+A [recent study of repository-level context files](https://arxiv.org/html/2602.11988v3) found that they did not generally improve coding agents' task success. For us, that's a reminder to focus HUMAN.md on making human intent explicit, rather than adding documentation for its own sake.
+
 ## Get started
 
 Start with a Markdown file in whatever form helps you explain your thinking. The headings below are one option; a short note can work too. The CLI is an optional convenience for copying a template.
@@ -210,12 +216,6 @@ file, even without installing the CLI.
 Git preserves revisions; your explanations make the changes in reasoning understandable. Focus on what changes your understanding or direction, without documenting every task, refactor, or bug fix. Our [creator's note](https://github.com/Kylo1110/HUMANmd/blob/main/HUMAN.md#a-note-from-the-creator) describes how this idea developed.
 
 **Keep a record of what you learned and why your direction changed.**
-
-## Keep it simple
-
-A few honest sentences can be enough. Templates, headings, and Decision Logs are optional tools. Adapt the structure as your project develops, leave questions open, and add detail when it helps. HUMAN.md complements Git history and your existing documentation; it provides context rather than enforcing a workflow or guaranteeing agent behavior. The CLI only copies templates and does not generate project intent.
-
-A [recent study of repository-level context files](https://arxiv.org/html/2602.11988v3) found that they did not generally improve coding agents' task success. For us, that's a reminder to focus HUMAN.md on making human intent explicit, rather than adding documentation for its own sake.
 
 ## Contributing
 
