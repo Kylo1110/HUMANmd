@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/humanmd-banner.png" width="100%" alt="HUMAN.md — Code is getting cheaper. Thinking isn't. A pixel-art woman and man, depicted as developers or researchers, collaborate with a friendly robot over a shared intent document.">
+  <img src="docs/assets/humanmd-banner.png" width="100%" alt="HUMAN.md. A pixel-art woman and man, depicted as developers or researchers, collaborate with a friendly robot over a shared intent document.">
 </p>
 
 <p align="center">
