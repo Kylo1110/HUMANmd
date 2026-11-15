@@ -20,6 +20,8 @@
 
 Research and software projects begin with ideas, questions, and assumptions. Those change as we experiment, build, and learn. HUMAN.md is a commitment to keeping that thinking visible and traceable as a project develops, using a human-owned Markdown file to explain why the work matters and how its direction evolves.
 
+A few honest sentences can be enough. Templates, headings, and Decision Logs are optional tools: adapt them as the project develops, leave questions open, and add detail when it helps. HUMAN.md complements Git history and existing documentation. It doesn't enforce a workflow or guarantee agent behavior, and the CLI only copies templates; it doesn't generate your intent.
+
 **Keep the reasoning behind your project visible as it develops.**
 
 ## A note from the creators
@@ -28,7 +30,9 @@ In a world that keeps moving faster, HUMAN.md is an invitation to slow down for 
 
 **There is no perfect structure to fill in. Give the thinking a place to happen.**
 
-Agents can help us explore and challenge ideas, while we remain responsible for directing their work, reviewing the results, and how we use the code. We don't claim HUMAN.md is an established standard, a proven solution, or the right workflow for every project. We want to learn whether a small Markdown file can help, and we invite you to help shape it. Our [creator's note](https://github.com/Kylo1110/HUMANmd/blob/main/HUMAN.md#a-note-from-the-creator) shares the personal thinking behind the idea.
+Agents can help us explore and challenge ideas, while we remain responsible for directing their work, reviewing the results, and how we use the code. A [recent study of repository-level context files](https://arxiv.org/html/2602.11988v3) found that they did not generally improve coding agents' task success. For us, that's a reminder to focus HUMAN.md on making human intent explicit, rather than adding documentation for its own sake.
+
+We don't claim HUMAN.md is an established standard, a proven solution, or the right workflow for every project. We want to learn whether a small Markdown file can help, and we invite you to help shape it. Our [creator's note](https://github.com/Kylo1110/HUMANmd/blob/main/HUMAN.md#a-note-from-the-creator) shares the personal thinking behind the idea.
 
 ## Before the first line of code
 
@@ -62,12 +66,6 @@ Your README may already explain why the project exists. HUMAN.md gives that reas
 | `AGENTS.md` | How AI agents should work in the project. |
 | `CHANGELOG.md` | What changed in the software. |
 | `HUMAN.md` | Why the project exists, what it aims to achieve, and how its reasoning evolves. |
-
-## Keep it simple
-
-A few honest sentences can be enough. Templates, headings, and Decision Logs are optional tools. Adapt the structure as your project develops, leave questions open, and add detail when it helps. HUMAN.md complements Git history and your existing documentation; it provides context rather than enforcing a workflow or guaranteeing agent behavior. The CLI only copies templates and does not generate project intent.
-
-A [recent study of repository-level context files](https://arxiv.org/html/2602.11988v3) found that they did not generally improve coding agents' task success. For us, that's a reminder to focus HUMAN.md on making human intent explicit, rather than adding documentation for its own sake.
 
 ## Get started
 
