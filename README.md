@@ -20,9 +20,7 @@
 
 Research and software projects begin with ideas, questions, and assumptions. Those change as we experiment, build, and learn. HUMAN.md is a commitment to keeping that thinking visible and traceable as a project develops, using a human-owned Markdown file to explain why the work matters and how its direction evolves.
 
-A few honest sentences can be enough. Templates, headings, and Decision Logs are optional tools: adapt them as the project develops, leave questions open, and add detail when it helps. HUMAN.md complements Git history and existing documentation. It doesn't enforce a workflow or guarantee agent behavior, and the CLI only copies templates; it doesn't generate your intent.
-
-**Keep the reasoning behind your project visible as it develops.**
+A few honest sentences can be enough. Templates, headings, and Decision Logs are optional: adapt them as the project develops, leave questions open, and add detail when it helps. HUMAN.md keeps the reasoning alongside your code and existing documentation.
 
 ## A note from the creators
 
@@ -32,7 +30,7 @@ In a world that keeps moving faster, HUMAN.md is an invitation to slow down for 
 
 Agents can help us explore and challenge ideas, while we remain responsible for directing their work, reviewing the results, and how we use the code. A [recent study of repository-level context files](https://arxiv.org/html/2602.11988v3) found that they did not generally improve coding agents' task success. For us, that's a reminder to focus HUMAN.md on making human intent explicit, rather than adding documentation for its own sake.
 
-We don't claim HUMAN.md is an established standard, a proven solution, or the right workflow for every project. We want to learn whether a small Markdown file can help, and we invite you to help shape it. Our [creator's note](https://github.com/Kylo1110/HUMANmd/blob/main/HUMAN.md#a-note-from-the-creator) shares the personal thinking behind the idea.
+HUMAN.md is an evolving idea. We don't claim it's a proven solution or the right fit for every project, and we invite you to help shape it. Our [creator's note](https://github.com/Kylo1110/HUMANmd/blob/main/HUMAN.md#a-note-from-the-creator) shares the personal thinking behind the idea.
 
 ## Before the first line of code
 
@@ -42,23 +40,19 @@ We don't claim HUMAN.md is an established standard, a proven solution, or the ri
   <img src="docs/assets/think-before-code.png" width="100%" alt="A blonde woman researcher and a man researcher, wearing lab coats and holding research notes, work with an AI robot through six steps: find the purpose, question assumptions, define success, write HUMAN.md, make a human decision, then build. A return loop from the decision to the questions shows reflection and refinement before proceeding.">
 </p>
 
-<p align="center"><strong>Purpose → Questions → Success → HUMAN.md → Human decision → Code</strong></p>
-
 **Your first step may be an experiment. Write down what you want to learn before asking an agent to build it.**
 
-The diagram is a guide to choosing a deliberate next step, including an experiment. Its loop makes room to revisit questions, assumptions, and intended outcomes before proceeding. Start with the question, the assumptions you want to test, and what you will look for in the results. You can begin with open questions and revise the approach as you learn; an exhaustive plan is not required. This reflection continues during experiments, implementation, and maintenance: when you learn something that changes the approach, explain what changed and why.
+The diagram offers a starting point, with room to revisit questions, assumptions, and intended outcomes. An exhaustive plan isn't required. As you experiment, implement, and maintain the project, explain what you learn and why the approach changes.
 
 HUMAN.md follows three simple principles:
 
-1. Human First. People own the project's purpose and direction. AI can help clarify ideas while keeping that intent explicit.
-2. Agent Aware. Give agents the goals and context they need to challenge assumptions constructively and ask before fundamentally changing direction.
-3. Living Document. When your understanding changes, update HUMAN.md. Record meaningful decisions, not every code change.
-
-**AI can propose. Humans decide.**
+1. Human ownership. People define the purpose and remain responsible for the work.
+2. Agent awareness. Give agents context to question assumptions and ask before changing direction.
+3. Evolving reasoning. Record meaningful changes in understanding, not every code change.
 
 ## One file. A different purpose.
 
-Your README may already explain why the project exists. HUMAN.md gives that reasoning a dedicated home when it helps to keep ideas, assumptions, and decisions together. Link to existing explanations and research notes rather than maintaining duplicate versions. The roles below can overlap; they are useful distinctions, not strict boundaries.
+Your README may already explain why the project exists. HUMAN.md offers a dedicated home when it helps to keep ideas, assumptions, and decisions together. Link to existing explanations rather than duplicating them. These roles can overlap:
 
 | File | Purpose |
 | --- | --- |
@@ -69,7 +63,7 @@ Your README may already explain why the project exists. HUMAN.md gives that reas
 
 ## Get started
 
-Start with a Markdown file in whatever form helps you explain your thinking. The headings below are one option; a short note can work too. The CLI is an optional convenience for copying a template.
+Start with a Markdown file, or use the optional CLI to copy a template. A short note can work as well as a set of headings.
 
 ### Option 1 — Start with Markdown
 
@@ -88,7 +82,7 @@ What are we trying to achieve?
 What would success look like?
 ```
 
-That's enough to begin. Add more detail as your thinking develops. There are no mandatory sections or rigid schemas. You can include an optional Creator's note to explain, in your own words, what brought you to the project and why it matters to you. See the [voluntary specification](https://github.com/Kylo1110/HUMANmd/blob/main/docs/specification.md).
+You can also begin with a Creator's note explaining what brought you to the project. No sections are mandatory; see the [voluntary specification](https://github.com/Kylo1110/HUMANmd/blob/main/docs/specification.md).
 
 <details>
 <summary>A small example: organizing research experiments</summary>
@@ -130,22 +124,7 @@ Then, inside your project:
 humanmd init
 ```
 
-Initialization shows the template, file location, and three next steps. Interactive terminals get a colored header; redirected output stays plain. For example:
-
-```text
-  HUMAN.md
-  Code is getting cheaper. Thinking isn't.
-
-  + Created HUMAN.md (minimal)
-  Location: /path/to/your-project/HUMAN.md
-
-  BEFORE YOU BUILD
-  01  Open HUMAN.md and write why this project exists.
-  02  Define success, or what you want to learn.
-  03  Ask your agent to read it before implementation.
-
-  AI can propose. Humans decide.
-```
+The CLI shows the selected template, file location, and next steps. Interactive terminals get a colored header; redirected output stays plain.
 
 Or choose a template:
 
@@ -184,7 +163,7 @@ Different projects begin with different questions.
 | [Software](https://github.com/Kylo1110/HUMANmd/blob/main/src/humanmd/templates/software.md) | Problems, users, constraints, and desired outcomes. |
 | [Exploration](https://github.com/Kylo1110/HUMANmd/blob/main/src/humanmd/templates/exploration.md) | Early ideas, assumptions, and experiments. |
 
-These are starting points, not rules. Adapt them to your project. All four templates include an optional Creator's note. It works with any project type: keep it, leave it blank, or remove it. See the [Creator's note guidance](https://github.com/Kylo1110/HUMANmd/blob/main/docs/specification.md#creators-note-optional). See the fictional [research](https://github.com/Kylo1110/HUMANmd/blob/main/examples/research-project/HUMAN.md) and [software](https://github.com/Kylo1110/HUMANmd/blob/main/examples/software-project/HUMAN.md) examples.
+All four templates can be adapted and include an optional Creator's note. See the [Creator's note guidance](https://github.com/Kylo1110/HUMANmd/blob/main/docs/specification.md#creators-note-optional). See the fictional [research](https://github.com/Kylo1110/HUMANmd/blob/main/examples/research-project/HUMAN.md) and [software](https://github.com/Kylo1110/HUMANmd/blob/main/examples/software-project/HUMAN.md) examples.
 
 ## Give your AI agents context
 
@@ -211,9 +190,7 @@ a service or special tooling.
 file, even without installing the CLI.
 ```
 
-Git preserves revisions; your explanations make the changes in reasoning understandable. Focus on what changes your understanding or direction, without documenting every task, refactor, or bug fix. Our [creator's note](https://github.com/Kylo1110/HUMANmd/blob/main/HUMAN.md#a-note-from-the-creator) describes how this idea developed.
-
-**Keep a record of what you learned and why your direction changed.**
+Git preserves revisions; your explanations make the changes in reasoning understandable. Focus on what you learned and why the direction changed, without documenting every task, refactor, or bug fix.
 
 ## Contributing
 
