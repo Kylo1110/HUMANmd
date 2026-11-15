@@ -18,13 +18,13 @@
 
 ## Code explains how. HUMAN.md explains why.
 
-Research and software projects begin with ideas, questions, and assumptions. Those change as we experiment, build, and learn. HUMAN.md is a commitment to keeping that thinking visible and traceable as a project develops, using a human-owned Markdown file to explain why the work matters and how its direction evolves.
+HUMAN.md is an invitation to think deliberately before building, and to keep thinking as a project develops. Ask why the work matters, what you hope to achieve, and which assumptions you want to test. A small, human-owned Markdown file gives the important parts of that reflection a home, so collaborators, AI agents, and your future self can understand how the direction developed.
 
 A few honest sentences can be enough. Templates, headings, and Decision Logs are optional: adapt them as the project develops, leave questions open, and add detail when it helps. HUMAN.md keeps the reasoning alongside your code and existing documentation.
 
 ## A note from the creators
 
-In a world that keeps moving faster, HUMAN.md is an invitation to slow down for a moment. Take a pen or an iPad, make a cup of coffee or tea, and think about what you want your project to achieve. We hope it can become a small fireplace for you and your team—a place to gather your thoughts, question assumptions, and return as the project develops.
+In a world that keeps moving faster, we want to make a little room to slow down and collect our thoughts. Take a pen or an iPad, make a cup of coffee or tea, and think about what you want your project to achieve. We hope it can become a small fireplace for you and your team—a place to gather your thoughts, question assumptions, and return as the project develops.
 
 **There is no perfect structure to fill in. Give the thinking a place to happen.**
 
@@ -63,11 +63,39 @@ Your README may already explain why the project exists. HUMAN.md offers a dedica
 
 ## Get started
 
-Start with a Markdown file, or use the optional CLI to copy a template. A short note can work as well as a set of headings.
+Use the optional CLI to copy a template, or start writing a Markdown file yourself.
 
-### Option 1 — Start with Markdown
+### Option 1 — Use the CLI
 
-Create a `HUMAN.md` in your project root:
+*Release prerequisite: `humanmd` is not currently available on PyPI. These commands apply after publication; until then, use Markdown as described in Option 2.*
+
+Requires [uv](https://docs.astral.sh/uv/getting-started/installation/) and Python 3.10+. Install the CLI, then initialize a file inside your project's existing directory:
+
+```bash
+uv tool install humanmd
+humanmd init
+```
+
+Choose a template:
+
+```bash
+humanmd init --template research
+```
+
+List templates or get help:
+
+```bash
+humanmd templates
+humanmd --help
+```
+
+The installed CLI works offline, has no runtime dependencies, and never overwrites an existing `HUMAN.md`. The target directory must already exist.
+
+**The CLI offers a starting point. You provide the thinking.**
+
+### Option 2 — Just use Markdown
+
+No installation is needed. Create a `HUMAN.md` in your project root and start writing about its purpose, goals, and assumptions:
 
 ```markdown
 # HUMAN.md
@@ -108,49 +136,6 @@ two minutes and find its purpose, parameters, and artifacts a week later.
 See the [full software example](https://github.com/Kylo1110/HUMANmd/blob/main/examples/software-project/HUMAN.md) for constraints and an initial decision.
 
 </details>
-
-### Option 2 — Use the CLI
-
-HUMAN.md also includes a small Python CLI that creates a template for you. Install directly from this repository using [uv](https://docs.astral.sh/uv/getting-started/installation/) (Python 3.10+):
-
-```bash
-git clone https://github.com/Kylo1110/HUMANmd.git
-uv tool install ./HUMANmd
-```
-
-Then, inside your project:
-
-```bash
-humanmd init
-```
-
-The CLI shows the selected template, file location, and next steps. Interactive terminals get a colored header; redirected output stays plain.
-
-Or choose a template:
-
-```bash
-humanmd init --template research
-humanmd init --template software
-humanmd init --template exploration
-```
-
-Other commands:
-
-```bash
-humanmd templates
-humanmd init -t software --path ./existing-project
-humanmd --help
-```
-
-Once published to PyPI, the intended installation command will be:
-
-```bash
-uv tool install humanmd
-```
-
-*PyPI publication and package-name availability are not yet confirmed.* The CLI works offline, requires no API key or runtime dependencies, and never overwrites an existing `HUMAN.md`. Target directories must already exist.
-
-**The CLI offers a starting point. You provide the thinking.**
 
 ## Choose a starting point
 
