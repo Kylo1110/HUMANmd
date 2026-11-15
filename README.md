@@ -228,3 +228,10 @@ Thank you to [@butterpear](https://github.com/butterpear), [@justinw98](https://
 <p align="center">
   <img src="docs/assets/humanmd-footer.png" width="640" alt="A woman researcher, man developer, and friendly robot assemble HUMAN.md from dark blocks on a complete grid, with pale outlines marking the unfilled cells.">
 </p>
+
+---
+
+*What we build may change.*  
+*The whys behind it remain.*
+
+*To the humans behind the whys.*
