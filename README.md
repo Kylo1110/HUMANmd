@@ -215,6 +215,8 @@ Git preserves revisions; your explanations make the changes in reasoning underst
 
 A few honest sentences can be enough. Templates, headings, and Decision Logs are optional tools. Adapt the structure as your project develops, leave questions open, and add detail when it helps. HUMAN.md complements Git history and your existing documentation; it provides context rather than enforcing a workflow or guaranteeing agent behavior. The CLI only copies templates and does not generate project intent.
 
+A [recent study of repository-level context files](https://arxiv.org/html/2602.11988v3) found that they did not generally improve coding agents' task success. For us, that's a reminder to focus HUMAN.md on making human intent explicit, rather than adding documentation for its own sake.
+
 ## Contributing
 
 HUMAN.md is an early open-source convention, and the goal is to keep it simple and useful. Contributions are welcome: improve a template, clarify the documentation, suggest better agent guidance, or share how you're using HUMAN.md. See [CONTRIBUTING.md](https://github.com/Kylo1110/HUMANmd/blob/main/CONTRIBUTING.md) and the [project philosophy](https://github.com/Kylo1110/HUMANmd/blob/main/docs/philosophy.md).
