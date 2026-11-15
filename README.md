@@ -231,7 +231,11 @@ Thank you to [@butterpear](https://github.com/butterpear), [@justinw98](https://
 
 ---
 
-*What we build may change.*  
-*The whys behind it remain.*
+<p align="center">
+  <em>What we build may change.</em><br>
+  <em>The whys behind it remain.</em>
+</p>
 
-*To the humans behind the whys.*
+<p align="center">
+  <em>To the humans behind the whys.</em>
+</p>
