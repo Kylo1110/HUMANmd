@@ -60,8 +60,8 @@ def test_terminal_output(tmp_path, monkeypatch, terminal, no_color, term, encodi
     # Strip color before checking wrapping and the content of the next steps.
     plain = re.sub(r"\x1b\[[0-9;]*m", "", rendered)
     assert max(map(len, plain.splitlines())) <= columns
-    assert "BEFORE YOU BUILD" in plain
-    assert "03  Ask your agent" in plain
+    assert "GATHER YOUR THOUGHTS" in plain
+    assert "03  Share your thinking" in plain
     assert str(target / "HUMAN.md").encode(encoding, errors="backslashreplace").decode(encoding).replace(" ", "") in "".join(plain.split())
     plain.encode(encoding)
     if encoding == "ascii" or not terminal or term == "dumb":

@@ -32,7 +32,7 @@ The four templates are minimal, research, software, and exploration. Each includ
 
 ## Initialization output
 
-After creating the file, the CLI displays a HUMAN.md header, the selected template, the resolved file location, and three next steps: write the purpose, define success or a learning goal, and ask your agent to read the document.
+After creating the file, the CLI displays a HUMAN.md header, the selected template, the resolved file location, and a friendly invitation to gather your thoughts: capture the initial idea, note why it matters and what you hope to learn, and share the context with your team and AI collaborators. It closes with a reminder to start small and revisit your thinking as you learn.
 
 Interactive terminals get a compact colored header and success indicator. Output wraps to the terminal width, with a simpler header on narrow screens. Redirecting output or setting `TERM=dumb` disables colors and decorative Unicode; terminals with limited character encodings use ASCII instead. Set `NO_COLOR=1` to disable colors while retaining the layout. No animation, prompt, or extra runtime dependency is required.
 

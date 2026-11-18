@@ -51,7 +51,7 @@ def print_success(target, template):
         for line in textwrap.wrap(value, width=width):
             write(line, style)
 
-    tagline = "Code is getting cheaper. Thinking isn't."
+    tagline = "Give your ideas a place to grow."
     write()
     if terminal and width >= 46:
         inner = width - 4
@@ -70,18 +70,18 @@ def print_success(target, template):
     wrapped(f"{'✓' if use_unicode else '+'} Created HUMAN.md ({template})", "1;32")
     wrapped(f"Location: {target}", "2")
     write()
-    write("BEFORE YOU BUILD", "1")
+    write("GATHER YOUR THOUGHTS", "1")
     for step, instruction in enumerate((
-        "Open HUMAN.md and write why this project exists.",
-        "Define success, or what you want to learn.",
-        "Ask your agent to read it before implementation.",
+        "Open HUMAN.md and capture what sparked your idea.",
+        "Note why it matters and what you hope to learn.",
+        "Share your thinking with your team and AI collaborators.",
     ), start=1):
         lines = textwrap.wrap(instruction, width=width - 4)
         write(f"{step:02}  {lines[0]}", "36")
         for line in lines[1:]:
             write("    " + line)
     write()
-    wrapped("AI can propose. Humans decide.", "2")
+    wrapped("Start small. Revisit as you learn.", "2")
     write()
 
 
