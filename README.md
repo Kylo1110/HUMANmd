@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://github.com/Kylo1110/HUMANmd/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-teal.svg?style=flat-square" alt="License: MIT"></a>
   <a href="https://github.com/Kylo1110/HUMANmd/blob/main/pyproject.toml"><img src="https://img.shields.io/badge/python-3.10%2B-blue.svg?style=flat-square" alt="Python: 3.10+"></a>
-  <a href="https://github.com/Kylo1110/HUMANmd/blob/main/pyproject.toml"><img src="https://img.shields.io/badge/version-0.1.0-orange.svg?style=flat-square" alt="Version: 0.1.0"></a>
+  <a href="https://github.com/Kylo1110/HUMANmd/blob/main/pyproject.toml"><img src="https://img.shields.io/badge/version-0.1.1-orange.svg?style=flat-square" alt="Version: 0.1.1"></a>
   <a href="https://github.com/Kylo1110/HUMANmd/blob/main/docs/cli.md#errors-and-safety"><img src="https://img.shields.io/badge/works-offline-teal.svg?style=flat-square" alt="Works offline"></a>
 </p>
 
@@ -66,8 +66,6 @@ Your README may already explain why the project exists. HUMAN.md offers a dedica
 Use the optional CLI to copy a template, or start writing a Markdown file yourself.
 
 ### Option 1 — Use the CLI
-
-*Release prerequisite: `humanmd` is not currently available on PyPI. These commands apply after publication; until then, use Markdown as described in Option 2.*
 
 Requires [uv](https://docs.astral.sh/uv/getting-started/installation/) and Python 3.10+. Install the CLI, then initialize a file inside your project's existing directory:
 

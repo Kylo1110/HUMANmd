@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "humanmd"
-version = "0.1.0"
+version = "0.1.1"
 description = "Initialize human-owned research and software project intent documents from Markdown templates."
 dynamic = ["readme"]
 requires-python = ">=3.10"

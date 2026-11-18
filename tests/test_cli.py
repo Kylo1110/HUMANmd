@@ -196,7 +196,7 @@ def test_help_and_version(args, capsys):
         main(args)
     assert error.value.code == 0
     output = capsys.readouterr().out
-    assert "0.1.0" in output if args == ["--version"] else "usage:" in output
+    assert "0.1.1" in output if args == ["--version"] else "usage:" in output
 
 
 def test_no_command(capsys):
@@ -248,7 +248,7 @@ def test_distributions_and_installed_entry_points(tmp_path):
     # an executable away from its runtime libraries.
     run("uv", "venv", "--python", sys.executable, str(environment), cwd=tmp_path, env=clean_env)
     run("uv", "pip", "install", "--python", str(python), "--no-index", "--no-deps", str(wheel), cwd=tmp_path, env=clean_env)
-    assert run(str(cli), "--version", cwd=tmp_path, env=clean_env).stdout.strip() == "0.1.0"
+    assert run(str(cli), "--version", cwd=tmp_path, env=clean_env).stdout.strip() == "0.1.1"
     assert "research" in run(str(cli), "templates", cwd=tmp_path, env=clean_env).stdout
     for name in TEMPLATES:
         target = tmp_path / name

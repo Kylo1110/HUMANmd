@@ -1,4 +1,4 @@
-# Preparing and publishing v0.1.0
+# Preparing and publishing v0.1.1
 
 Release preparation and publication are separate steps. This guide prepares a reviewable release; uploading to TestPyPI or PyPI, creating tags or GitHub releases, changing repository visibility, and configuring credentials require separate authorization.
 
@@ -7,7 +7,7 @@ Release preparation and publication are separate steps. This guide prepares a re
 - Confirm that `https://github.com/Kylo1110/HUMANmd` is accessible without authentication. An unauthenticated 404 does not establish whether a repository is private, missing, or unavailable through the current connection.
 - Confirm that you control the `humanmd` PyPI name or can publish under it. A missing public listing does not guarantee availability; see [PyPI's naming rules](https://docs.pypi.org/project-management/choosing-a-name/).
 - Confirm an authorized publishing account and authentication method. A manual scoped API token or a separately approved Trusted Publishing setup can be used. Keep tokens out of files and shell history; do not commit credentials. TestPyPI and PyPI have separate accounts and tokens.
-- Review the MIT license, metadata, documentation, and [draft release notes](release-notes-0.1.0.md). Do not claim adoption or experimental results that have not been observed.
+- Review the MIT license, metadata, documentation, and [release notes](release-notes-0.1.1.md). Do not claim adoption or experimental results that have not been observed.
 
 ## Verify the final commit
 
@@ -41,21 +41,21 @@ The commands below upload publicly. Run them only after approval and prerequisit
 TestPyPI upload:
 
 ```bash
-uv run --locked twine upload --repository-url https://test.pypi.org/legacy/ --username __token__ dist/humanmd-0.1.0-py3-none-any.whl dist/humanmd-0.1.0.tar.gz
+uv run --locked twine upload --repository-url https://test.pypi.org/legacy/ --username __token__ dist/humanmd-0.1.1-py3-none-any.whl dist/humanmd-0.1.1.tar.gz
 ```
 
 After reviewing TestPyPI, production upload with its separate token:
 
 ```bash
-uv run --locked twine upload --repository-url https://upload.pypi.org/legacy/ --username __token__ dist/humanmd-0.1.0-py3-none-any.whl dist/humanmd-0.1.0.tar.gz
+uv run --locked twine upload --repository-url https://upload.pypi.org/legacy/ --username __token__ dist/humanmd-0.1.1-py3-none-any.whl dist/humanmd-0.1.1.tar.gz
 ```
 
-For an isolated preview installation, set `UV_TOOL_DIR` and `UV_TOOL_BIN_DIR` to new temporary directories using your shell's environment-variable syntax. Install with `uv tool install --index-url https://test.pypi.org/simple/ humanmd==0.1.0`, then invoke `humanmd` from that temporary bin directory. Use different empty directories for the production check, installing `humanmd==0.1.0` with `--index-url https://pypi.org/simple/`. Initialization must run in an existing empty directory. These checks must use the index artifacts, not the local wheel or a cached tool installation.
+For an isolated preview installation, set `UV_TOOL_DIR` and `UV_TOOL_BIN_DIR` to new temporary directories using your shell's environment-variable syntax. Install with `uv tool install --index-url https://test.pypi.org/simple/ humanmd==0.1.1`, then invoke `humanmd` from that temporary bin directory. Use different empty directories for the production check, installing `humanmd==0.1.1` with `--index-url https://pypi.org/simple/`. Initialization must run in an existing empty directory. These checks must use the index artifacts, not the local wheel or a cached tool installation.
 
 1. Upload only the reviewed wheel and source archive to TestPyPI with its own credentials. Preview the project page, check images and links, and install the package into a temporary uv tool environment using TestPyPI as the index. Avoid reusing an existing tool installation during this check.
 2. If the TestPyPI preview and installation succeed, upload those same reviewed artifacts to PyPI with the production account. Keep the artifact hashes available for comparison. PyPI filenames cannot be reused after upload; correct problems with a new version rather than trying to replace a release.
 3. Verify `uv tool install humanmd` in a fresh tool environment using the default PyPI index, then test `humanmd --version`, `humanmd templates`, and initialization in an empty existing directory.
 4. Update the README and CLI guide to reflect actual publication and the final distribution name. Add a PyPI badge only once the public project exists.
-5. Create the `v0.1.0` tag at the reviewed release commit and a GitHub release using the reviewed notes. Include the artifact hashes and actual checks performed. Update documentation in a subsequent commit if necessary.
+5. Create the `v0.1.1` tag at the reviewed release commit and a GitHub release using the reviewed notes. Include the artifact hashes and actual checks performed. Update documentation in a subsequent commit if necessary.
 
 Do not announce installation availability until the production-index check succeeds. Record outstanding authentication, name, visibility, and platform checks explicitly rather than treating them as passed.

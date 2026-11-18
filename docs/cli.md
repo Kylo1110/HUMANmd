@@ -10,7 +10,7 @@ uv tool install .
 
 uv installs the CLI in an isolated tool environment. If `humanmd` is not on your PATH, run `uv tool update-shell` and restart your shell. No virtual-environment activation is needed for the installed command.
 
-**Post-release installation:** `uv tool install humanmd` applies only after the package name is confirmed and the distribution is published. No PyPI publication is claimed.
+**Install from PyPI:** `uv tool install humanmd`. GitHub may contain updates that have not yet been uploaded to PyPI.
 
 ## Commands
 
@@ -73,12 +73,12 @@ These commands require the environment and cached dependencies to be available a
 
 ## Manual release preparation
 
-Use the [release guide](releasing.md) for the final-commit checks, description preview, artifact hashes, TestPyPI review, and publication sequence. [Draft v0.1.0 release notes](release-notes-0.1.0.md) are prepared for review; they do not announce availability.
+Use the [release guide](releasing.md) for the final-commit checks, description preview, artifact hashes, TestPyPI review, and publication sequence. [v0.1.1 release notes](release-notes-0.1.1.md) describe the console-message update; GitHub releases and PyPI uploads are separate steps.
 
 1. Review HUMAN.md and the documentation; confirm version, license, and repository metadata.
 2. Confirm the `humanmd` distribution name is available or that you control it on PyPI. If unavailable, choose and approve a distribution name before publishing and update metadata and installation instructions consistently.
 3. Run tests, build both distributions, inspect their templates, and run `uv run --locked twine check dist/*`.
-4. Outside this repository, use `uv tool install /absolute/path/to/humanmd-0.1.0-py3-none-any.whl` to install the built wheel in an isolated environment and run `humanmd --version`, `humanmd templates`, `humanmd init`, and verify module execution through the distribution integration tests. Initialization should also succeed without network access.
+4. Outside this repository, use `uv tool install /absolute/path/to/humanmd-0.1.1-py3-none-any.whl` to install the built wheel in an isolated environment and run `humanmd --version`, `humanmd templates`, `humanmd init`, and verify module execution through the distribution integration tests. Initialization should also succeed without network access.
 5. Configure authorized PyPI credentials or an approved publishing workflow. Obtain explicit publication approval.
 6. Only after approval, manually upload the reviewed artifacts using `uv run --locked twine upload dist/*`. Create a GitHub release only if separately authorized.
 
